@@ -1,12 +1,24 @@
-<h1>Log In</h1>
 
+
+<div class="center">
+<h1>Log In</h1>
 <% if flash[:error].present? %>
     <h2><%= flash[:error] %></h2>
 <% end %>
+<form>
+<div class="txt_field">
 <%= form_tag login_path do %>
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+  <label><%= label_tag :email %>
+    <%= email_field_tag :email %></label>
+</div>
+    <div class="txt_field">
+     <label><%= label_tag :password %>
+    <%= password_field_tag :password %></label></div>
+   
     <%= submit_tag "Sign in" %>
-<% end %>
+     <% end %>
+</form>
+
+
+
+

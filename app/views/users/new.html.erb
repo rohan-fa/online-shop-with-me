@@ -1,3 +1,5 @@
+
+<div class="user-new">
 <h1>Sign up</h1>
 
 <% if @user.errors.any? %>
@@ -7,6 +9,8 @@
         <% end %>
     </ol>
 <% end %>
+<form>
+<div class= "input-field">
 <%= form_for @user do |f| %>
     <%= f.label :email %>
     <%= f.email_field :email %>
@@ -16,3 +20,6 @@
     <%= f.password_field :password_confirmation %>
     <%= f.submit "Sign up!" %>
 <% end %>
+</div>
+</div>
+</form>

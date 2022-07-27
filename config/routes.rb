@@ -6,10 +6,8 @@ Rails.application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
-  # get '/login/categories' => 'categories#index' 
 
-  resources :categories, only: [:index] do
-    resources :products, only: [:index]
+  resources :categories
+  resources :products
   end 
 
-end

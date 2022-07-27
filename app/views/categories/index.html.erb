@@ -1,14 +1,15 @@
     <h2>Categories(<%= @categories.count %>)</h2>
 
-<ol>
+<ul>
   <% @categories.each do |category| %>
     <li>
-     <%= link_to category_products_path(category) do %> 
-        <%= category.title %>
-        (<%= category.products.count %> product)
+     <%= link_to category_path(category) do %>
+        <%= image_tag category.image, :class => 'thumb' if category.image.present? %>
+        <%= category.title %>(<%= category.products.count %>)
         
       <% end %>
     </li>
+    </ul>
     <% end %>
 
     

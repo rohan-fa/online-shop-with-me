@@ -1,0 +1,9 @@
+<%= form_for @category do |f| %><%# form helper #%>
+<%= f.label :title %>
+<%= f.text_field :title, :required => true %>
+
+<%= f.label :image %>
+<%= f.url_field :image %>
+<%= f.submit %>
+
+<% end %>
