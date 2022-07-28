@@ -1,18 +1,24 @@
-    <h2>Categories(<%= @categories.count %>)</h2>
+    <div class="container">
+      <h2>Categories(<%= @categories.count %>)</h2>
+    
 
 <ul>
-  <% @categories.each do |category| %>
-    <li>
-     <%= link_to category_path(category) do %>
-        <%= image_tag category.image, :class => 'thumb' if category.image.present? %>
-        <%= category.title %>(<%= category.products.count %>)
-        
-      <% end %>
-    </li>
-    </ul>
-    <% end %>
+  <div class="categories">
+    <% @categories.each do |category| %>
+      
+      <div class="pic-title">
+          <%= image_tag category.image, :class => 'cat-thumb' if category.image.present? %>
+            <h4>
+              <%= link_to category_path(category) do %>
+              <%= category.title %>(<%= category.products.count %>)
+            </h4>
+            <% end %>
+      </div> 
 
-    
+    <% end %>
+  </div>
+</ul>
+    </div>
 
 
 

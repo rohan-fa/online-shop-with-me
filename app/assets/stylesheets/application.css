@@ -1,17 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-.thumb{
-    height: 12em;
+.cat-thumb{
+    height: 200px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34 rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 5px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    
+    
 }
-.feature{
-    max-height: 30em;
+
+.categories {
+    display: flex;
+    gap: 3em;
 }
+
+.product{
+    flex: 1 1 0;
+    flex-wrap: wrap;
+}
+
+.products {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.Product-feature{
+    align-items: center;
+}
+
+.pic-title h4{
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#ff7a05;
+    margin-left: 32px;
+    text-decoration: none;
+    flex: 1 1 0;
+}
+.feature {
+    height: 280px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34 rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 5px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .container{
-    max-width: 960px;
+    max-width: 1140px;
     margin: 0 auto;
 } 
 
@@ -45,14 +114,7 @@
     padding: 15px 10px;
     border-radius: 10px;
 }
-.center button{
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 10px 15px;
-    width: 50%;
-    border-radius: 5px;
-}
+
 .user-new{
     width: 350px;
     top: 20%;
@@ -60,14 +122,14 @@
     transform: translate(-50%, -50%);
     position: absolute;
     color:black;
-    
+    z-index: -1;
   }
   .user-new h1{
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
     text-transform: uppercase;
-    margin: 46px 0;
-    margin-top: 370px;
+    margin: 4px 0;
+    margin-top: 443px;
     }
 .user-new input-field{
     font-size: 20px;
@@ -79,16 +141,91 @@
     padding: 15px 10px;
     border-radius: 10px;
 }
-.user-new button{
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 10px 15px;
-    width: 50%;
-    border-radius: 5px;
-}
+
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:#0d0d0f;
+    transition: 0.3s ease;
+}
+#navbar li a:hover{
+    color: #ff7a05;
+}
+#hero {
+    background-image: url("./banner.png"); 
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+#hero h4{
+    padding-bottom: 10px;
+    margin-top: -396px;
+    margin-left: -80px;
+    
+}
+#hero h2{
+    margin-top: -10px;
+    margin-left: -82px;
+}
+#hero h1{
+    color: #ff7a05;
+    margin-left: -82px;
+}
+#hero p{
+    margin-left: -82px;
+}
+.box{
+    text-decoration: none;
+}
+.back{
+    background-color: #ff7a05;
+    color: black;
+    border: 0;
+    padding: 4px 4px 4px 4px;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    font-weight: 300;
+    font-size: 15px;
+    border: 5px;
+    display: inline-block;
+}
+.chosing-product{
+   
+    color: black;
+    padding: 4px 4px 4px 4px;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    font-weight: 300;
+    font-size: 15px;
+    border: 5px;
+    display: inline-block;
+}
+.title{
+    text-decoration: none;
+}
+
