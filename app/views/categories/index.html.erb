@@ -7,7 +7,9 @@
     <% @categories.each do |category| %>
       
       <div class="pic-title">
+      <div class="image-container">
           <%= image_tag category.image, :class => 'cat-thumb' if category.image.present? %>
+            </div>
             <h4>
               <%= link_to category_path(category) do %>
               <%= category.title %>(<%= category.products.count %>)
