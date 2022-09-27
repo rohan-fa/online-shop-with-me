@@ -15,35 +15,35 @@
   <div class="container">
       <section id="header">
     
-    <i class="fa-solid fa-bag-shopping"></i>
-<div>
-  <ul id="navbar">
-    <li><%= link_to 'Home', root_path, :class => "active" %></li>
-    <li><%= link_to 'Shop', categories_path %></li>
-    <li><%= link_to 'About', root_path %></li>
-    <li><%= link_to 'Contact', root_path %></li>
-    <li><%= link_to 'Sign up', new_user_path %></li>
+      <i class="fa-solid fa-bag-shopping"></i>
+  <div>
+    <ul id="navbar">
+        <li><%= link_to 'Home', root_path, :class => "active" %></li>
+        <li><%= link_to 'Shop', categories_path %></li>
+        <li><%= link_to 'About', root_path %></li>
+        <li><%= link_to 'Contact', root_path %></li>
+        <li><%= link_to 'Sign up', new_user_path %></li>
         <li><%= link_to 'Sign in', login_path %></li>
-</ul>
+    </ul>
  
 
-</section>
-      <% if @current_user.present? %>
-      <% if @current_user.admin? %>
-        <%= link_to "All users", users_path%>
-        <%= link_to "category", new_category_path %>
-      <% end %>
-        <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+      </section>
+          <% if @current_user.present? %>
+          <% if @current_user.admin? %>
+            <%= link_to "All users", users_path%>
+            <%= link_to "category", new_category_path %> 
+          <% end %>
+          <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
       <% else %>
-        <% link_to 'Sign up', new_user_path %>
-        <% link_to 'Sign in', login_path %>
+          <% link_to 'Sign up', new_user_path %>
+          <% link_to 'Sign in', login_path %>
       <% end %>
     
     </header>
 
     <%= yield %>
-  </div>
-</div>
+    </div>
+    </div>
     
   </body>
 </html>

@@ -1,22 +1,24 @@
 <div class="container">
-<div class="show-items">
-<h1><%= @product.name %></h1>
-<div class="product-id">
-<%= image_tag @product.image, :class => 'feature' if @product.image.presence %>
-<ul>
-        <li>Name: <%= @product.name %></li>
-        <li>Price: $<%= @product.price %></li>
-        <li>Description: <%= @product.description %></li>
-</ul>
-</div>
+        <div class="show-items">
+                <h1><%= @product.name %></h1>
+                <div class="product-id">
+                        <%= image_tag @product.image, :class => 'feature' if @product.image.presence %>
+                        <ul>
+                                <li>Name: <%= @product.name %></li>
+                                <li>Price: $<%= @product.price %></li>
+                                <li>Description: <%= @product.description %></li>
+                        </ul>
+                </div>
     
 
-<div class="controls">
-
-<%= link_to 'choose the product', edit_product_path(@product) %>
-<%= button_to 'Back', category_path(@product.category.id), :method => 'get', class: "btn btn-warning" %>
-</div>
-</div>
+                <div class="controls">
+                        <% if @current_user.admin? %>
+                        <%= link_to 'Edit Product', edit_product_path(@product.id) %>
+                        <%= button_to 'Delete Product', category_path(@product.id), :method => 'delete' %> 
+                        <% end %> 
+                        <%= button_to 'Back', category_path(@product.category.id), :method => 'get', class: "btn btn-warning" %>
+                </div>
+        </div>
 
 </div>
 

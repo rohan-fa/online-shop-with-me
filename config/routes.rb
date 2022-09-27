@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :categories
-  resources :products
+  resources :products, :except => [:index]
   end 
 
