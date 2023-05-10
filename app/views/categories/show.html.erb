@@ -1,10 +1,8 @@
 <div class="container">
 
 
-    h1><%= @category.title %></h1>
+    <h1><%= @category.title %></h1>
     <ul>
-
-        Title: <%= @category.title %>
             <% if @category.products.present? %>
                 <div class="products">
                     <% @category.products.each do |product| %>
@@ -29,7 +27,7 @@
         
 
     <div class="controls">  
-        <%= button_to 'Back', categories_path, :method => 'get', class: "btn btn-warning" %>
+        <%= button_to 'Back', categories_path, :method => 'get', :class => "btn btn-warning" %>
 
     </div>
 </div>

@@ -12,11 +12,11 @@
     
 
                 <div class="controls">
-                        <% if @current_user.admin? %>
-                        <%= link_to 'Edit Product', edit_product_path(@product.id) %>
-                        <%= button_to 'Delete Product', category_path(@product.id), :method => 'delete' %> 
+                        <% if @current_user&.admin? %>
+                                <%= link_to 'Edit Product', edit_product_path(@product.id) %>
+                                <%= button_to 'Delete Product', category_path(@product.id), :method => 'delete' %> 
                         <% end %> 
-                        <%= button_to 'Back', category_path(@product.category.id), :method => 'get', class: "btn btn-warning" %>
+                        <%= button_to 'Back', category_path(@product.category_id), :method => "get" %>
                 </div>
         </div>
 
